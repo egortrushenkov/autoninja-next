@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://автонинзя.рф/sitemap.xml
+Host: https://автонинзя.рф
