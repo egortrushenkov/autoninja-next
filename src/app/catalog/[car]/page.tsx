@@ -106,70 +106,64 @@ export default async function CarPage(props: any) {
                   <div className={styles.about_wrapper}>
                       <ul className = {styles.about_content_items}>
                         <div className={styles.item_left}>
-                          <li className = {styles.item_about}>
+                          {Engine && <li className = {styles.item_about}>
                             <img className = {styles.item_about_dote} src="/images/card_img/list-img.svg" alt="" />
                             <div>
                               <p className={styles.item_title}>Двигатель:</p>
                               <p className={styles.item_description}>{Engine}</p>
                             </div>
-                          </li>
-                          <li className = {styles.item_about}>
+                          </li>}
+                          {Acceleration && <li className = {styles.item_about}>
                             <img className = {styles.item_about_dote} src="/images/card_img/list-img.svg" alt="" />
                             <div>
                               <p className={styles.item_title}>Разгон до 100 км/ч:</p>
                               <p className={styles.item_description}>{Acceleration}</p>
                             </div>
-                          </li>
-                          <li className = {styles.item_about}>
+                          </li>}
+                          {Drive && <li className = {styles.item_about}>
                             <img className = {styles.item_about_dote} src="/images/card_img/list-img.svg" alt="" />
                             <div>
                               <p className={styles.item_title}>Привод:</p>
                               <p className={styles.item_description}>{Drive}</p>
                             </div>
-                              
-                          </li>
-                          <li className = {styles.item_about}>
+                          </li>}
+                          {Torque && <li className = {styles.item_about}>
                             <img className = {styles.item_about_dote} src="/images/card_img/list-img.svg" alt="" />
                             <div>
                               <p className={styles.item_title}>Крутящий момент:</p>
                               <p className={styles.item_description}>{Torque}</p>
                             </div>
-                          </li>
+                          </li>}
                         </div>
                         <div className = {styles.item_right}>
-
-                          <li className = {styles.item_about}>
+                          {Power && <li className = {styles.item_about}>
                             <img className = {styles.item_about_dote} src="/images/card_img/list-img.svg" alt="" />
                             <div>
                               <p className={styles.item_title}>Мощность:</p>
                               <p className={styles.item_description}>{Power}</p>
                             </div>
-                            
-                          </li>
-                          <li className = {styles.item_about}>
+                          </li>}
+                          {Box && <li className = {styles.item_about}>
                             <img className = {styles.item_about_dote} src="/images/card_img/list-img.svg" alt="" />
                             <div>
                               <p className={styles.item_title}>Коробка:</p>
                               <p className={styles.item_description}>{Box}</p>
                             </div>
-                            
-                          </li>
-                          <li className = {styles.item_about}>
+                          </li>}
+                          {Dimensions && <li className = {styles.item_about}>
                             <img className = {styles.item_about_dote} src="/images/card_img/list-img.svg" alt="" />
                             <div>
                               <p className={styles.item_title}>Габариты:</p>
                               <p className={styles.item_description}>{Dimensions}</p>
                             </div>
-                            
-                          </li>
-                          <li className = {styles.item_about}>
+                          </li>}
+                          {Tire_size && <li className = {styles.item_about}>
                             <img className = {styles.item_about_dote} src="/images/card_img/list-img.svg" alt="" />
                             <div>
                               <p className={styles.item_title}>Размер шин:</p>
                               <p className={styles.item_description}>{Tire_size}</p>
                             </div>
-                            
-                          </li>
+                          </li>}
                         </div>
                         
                         
