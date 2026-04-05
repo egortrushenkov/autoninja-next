@@ -60,24 +60,24 @@ export async function generateMetadata(props: any): Promise<Metadata> {
 export default async function CarPage(props: any) {
   const params = await props.params;
   const cars = await fetchData();
-  
-  const Id = cars.find( (car: { Slug: string, IdCar: number }) => car.Slug === params.car)?.IdCar || notFound();
-  const arrayId = Id - 1;
 
-  const Slug = cars[arrayId].Slug;
-  const Name = cars[arrayId].Name;
-  const Engine = cars[arrayId].Engine;
-  const Power = cars[arrayId].Power;
-  const Acceleration = cars[arrayId].Acceleration;
-  const Box = cars[arrayId].Box;
-  const Drive = cars[arrayId].Drive;
-  const Dimensions = cars[arrayId].Dimensions;
-  const Torque = cars[arrayId].Torque;
-  const Tire_size = cars[arrayId].Tire_size;
-  const Price = cars[arrayId].Price;
-  const Main_photo = cars[arrayId].Main_photo;
-  const Country = cars[arrayId].Country;
-  const Year = cars[arrayId].Year;
+  const car = cars.find((c: { Slug: string }) => c.Slug === params.car);
+  if (!car) notFound();
+
+  const Slug = car.Slug;
+  const Name = car.Name;
+  const Engine = car.Engine;
+  const Power = car.Power;
+  const Acceleration = car.Acceleration;
+  const Box = car.Box;
+  const Drive = car.Drive;
+  const Dimensions = car.Dimensions;
+  const Torque = car.Torque;
+  const Tire_size = car.Tire_size;
+  const Price = car.Price;
+  const Main_photo = car.Main_photo;
+  const Country = car.Country;
+  const Year = car.Year;
 
   const carData = { Name, Slug, Price, Main_photo, Engine, Drive, Year };
 
